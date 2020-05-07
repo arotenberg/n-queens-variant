@@ -1,4 +1,4 @@
-# n-queens-collinear-variant
+# n-queens-variant
 
 I was already reasonably familiar with the standard _N_ Queens problem before working on this problem.
 
@@ -13,3 +13,5 @@ I considered a few different options for implementing the `isValidPlacement()` c
 I used a recursive function to implement the backtracking. If we were expecting input sizes of _N_ = 1000 or more, I would want to switch to a heap-allocated stack to avoid the possibility of stack overflow. In practice, however, my implementation will take an unreasonable amount of time to run long before stack overflow becomes a serious concern.
 
 I wrote the code for Java 8 compatibility, since this version of Java is still widely deployed. An idiomatic Java 14 version would be identical except for possibly replacing a couple local variable types with `var`.
+
+This program is not necessarily very representative of my software design style for larger projects. There are only two classes in `src/main/java` and one test class in `src/test/java`, because the problem didn't seem to call for more. When I'm not writing little programs with tight inner loops, I tend to use a lot more wrapper types, Guava immutable collections, etc.
